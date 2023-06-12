@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100vw;
+    height: 100vw;
+}
+
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    background: whitesmoke;
+    color: black;
+    padding: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo img {
+    max-width: 40%;
+}
+
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-text {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .right-texts {
+        margin-top: 10px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .right-texts p {
+        margin: 0;
+    }
+}
+
+
+
+/* Main */
+
+.flex-container{
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+.flex-container h1{
+    display: flex;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.box1{
+    display: flex;
+    padding: 10px;
+    background:gray;
+
+}
+
+
+.inputs {
+    outline: none;
+    border: none;
+    border-bottom: solid 2px #06244c;
+    padding: 15px;
+    font-size: 18px;
+    margin: 20px 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.inputs::placeholder {
+    color: #f49f17;
+    text-align: center;
+    font-weight: 10px;
+}
+
+.boton {
+    width: 10%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #06244c;
+    color: #f49f17;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main p{
+    font-family: 'Open Sans', sans-serif;
+}

@@ -1,33 +1,38 @@
-function sumar() {
-    // Obtener los valores de los inputs
-    var num1 = parseInt(document.getElementById("numero1").value);
-    var num2 = parseInt(document.getElementById("numero2").value);
+function calcularCosto() {
+    // Obtener el valor del input
+    var numero = parseInt(document.getElementById("numeroInput").value);
 
-    // Realizar la suma
-    var resultado = num1 + num2;
+    // Realizar los cálculos según el rango
+    var costo;
 
-    // Actualizar el contenido del elemento <span> con el resultado
-    document.getElementById("resultado").textContent = resultado;
-}
-
-function mostrarInput() {
-    var checkboxSi = document.getElementById("checkboxSi");
-    var contenedorInput = document.getElementById("contenedorInput");
-
-    if (checkboxSi.checked) {
-        contenedorInput.style.display = "block";
+    if (numero >= 0 && numero <= 1000) {
+        costo = numero * 32;
+    } else if (numero > 1000 && numero <= 2500) {
+        costo = numero * 28;
+    } else if (numero > 2501 && numero <= 5000) {
+        costo = numero * 22;
+    } else if (numero > 5001 && numero <= 10000) {
+        costo = numero * 18;
+    } else if (numero > 10001 && numero <= 15000) {
+        costo = numero * 12;
+    } else if (numero > 10001 && numero <= 15000) {
+        costo = numero * 12;
+    } else if (numero > 15001 && numero <= 20000) {
+        costo = numero * 11.50;
+    } else if (numero > 20001 && numero <= 25000) {
+        costo = numero * 10.50;
+    } else if (numero > 25001 && numero <= 30000) {
+        costo = numero * 12;
+    } else if (numero > 30001 && numero <= 35000) {
+        costo = numero * 12;
+    } else if (numero > 35001 && numero <= 40000) {
+        costo = numero * 12;
+    } else if (numero > 40001 ) {
+        costo = "Cotizacion Especial, Contactar a tu especialista";
     } else {
-        contenedorInput.style.display = "none";
+        costo = 0; // Opcional: En caso de que el número esté fuera de los rangos establecidos
     }
-}
 
-function mostrarMensaje() {
-    var checkboxNo = document.getElementById("checkboxNo");
-    var mensajeContinuar = document.getElementById("mensajeContinuar");
-
-    if (checkboxNo.checked) {
-        mensajeContinuar.style.display = "block";
-    } else {
-        mensajeContinuar.style.display = "none";
-    }
+    // Mostrar el resultado en el elemento <p>
+    document.getElementById("resultado").textContent = "El costo es: " + costo;
 }
